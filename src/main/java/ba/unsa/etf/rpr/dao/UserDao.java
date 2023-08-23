@@ -1,4 +1,10 @@
 package ba.unsa.etf.rpr.dao;
 
-public interface UserDao {
+import ba.unsa.etf.rpr.domain.User;
+import ba.unsa.etf.rpr.exceptions.ProjectException;
+
+import java.util.List;
+
+public interface UserDao extends Dao<User>{
+    List<User> searchByEmail(String text) throws ProjectException;
 }
