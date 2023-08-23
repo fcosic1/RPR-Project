@@ -46,10 +46,6 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao{
         row.put("email", object.getEmail());
         row.put("password", object.getPassword());
         row.put("address", object.getAddress());
-
-
-
-
         return row;
     }
 
