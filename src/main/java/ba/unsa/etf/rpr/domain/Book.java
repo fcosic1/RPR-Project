@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.domain;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Book implements Idable{
 
@@ -41,6 +42,30 @@ public class Book implements Idable{
     public void setPrice(double price){this.price = price;}
     public String getBookType() {return bookType;}
     public void setBookType(String bookTypeId) {this.bookType = bookTypeId;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return getId() == book.getId() && getBookTitle() == book.getBookTitle() && Double.compare(book.getPrice(), getPrice()) == 0  && getBookType() == book.getBookType() && Objects.equals(getAgeOfBook(), book.getAgeOfBook()) && Objects.equals(getAuthor(), book.getAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getBookTitle(), getAgeOfBook(), getAuthor(), getPrice(), getBookType());
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "bookTitle=" + bookTitle +
+                ", ageOfBook=" + ageOfBook +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                ", bookType=" + bookType +
+                '}';
+    }
     @Override
     public void setId(int id) {
 
