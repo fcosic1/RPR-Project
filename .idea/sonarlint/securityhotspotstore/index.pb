@@ -9,5 +9,3 @@ a
 1src/main/java/ba/unsa/etf/rpr/domain/Product.java,0\d\0df4244bb613c3510f7211b3d4a44d05ad5db9cb
 Z
 *src/test/java/ba/unsa/etf/rpr/AppTest.java,9\b\9bdae70314931d22cd9741c6381ebe4f05ddbbe7
-Z
-*src/main/java/ba/unsa/etf/rpr/dao/Dao.java,a\1\a1348960998eebe088bc844c2afaaa6dd9d147f9
