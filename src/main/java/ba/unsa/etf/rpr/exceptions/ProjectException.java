@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.exceptions;
 
-public class ProjectException extends Exception {
-    public ProjectException(String message, Exception reason) {
+import java.sql.SQLException;
+
+public class ProjectException extends RuntimeException {
+    public ProjectException(String message, SQLException reason) {
         super(message, reason);
     }
     public ProjectException(String message) {
