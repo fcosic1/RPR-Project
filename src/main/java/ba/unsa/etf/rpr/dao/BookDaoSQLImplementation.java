@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -64,6 +65,22 @@ public class BookDaoSQLImplementation extends AbstractDao<Book> implements BookD
         return executeQuery("select * from Book where author LIKE concat('%',?,'%')",new Object[]{author});
 
     }
+    @Override
+    public List<Book> getBookByDate(Date date) throws ProjectException {
+        return executeQuery("select * from Book where ageOfBook > ?",new Object[]{date});
+    }
 
+
+
+    @Override
+    public List<Book> getBooksCheaperThan(double price) throws ProjectException {
+        return executeQuery("select * from Book where price <= ?",new Object[]{price});
+
+    }
+    @Override
+    public List<Book> getBooksByBooksType(String bookType) throws ProjectException {
+        return executeQuery("select * from Book where bookType LIKE concat('%',?,'%')",new Object[]{bookType});
+
+    }
 
 }
