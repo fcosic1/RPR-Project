@@ -1,4 +1,14 @@
 package ba.unsa.etf.rpr.dao;
 
-public interface PurchaseDao {
+import ba.unsa.etf.rpr.domain.Book;
+import ba.unsa.etf.rpr.domain.Purchase;
+import ba.unsa.etf.rpr.domain.User;
+import ba.unsa.etf.rpr.exceptions.ProjectException;
+
+import java.util.List;
+
+public interface PurchaseDao extends Dao<Purchase> {
+    List<Purchase> getByBook(Book book) throws ProjectException;
+    List<Purchase> getByUser(User user) throws ProjectException;
+
 }
