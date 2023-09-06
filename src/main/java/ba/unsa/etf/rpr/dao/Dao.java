@@ -1,4 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
-public interface Dao {
+import ba.unsa.etf.rpr.domain.Idable;
+
+public interface Dao<type> {
 }
