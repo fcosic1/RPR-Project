@@ -45,7 +45,19 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
 
     @Override
     public List<Purchase> getByUser(User user) throws ProjectException {
-        return null;
+        List<Purchase> list = new ArrayList<>();
+        try {
+            PreparedStatement s = getConnection().prepareStatement("select * from Purchase where user = ?");
+            s.setInt(1, user.getId());
+            ResultSet rs = s.executeQuery();
+            while (rs.next()) {
+                list.add(row2object(rs));
+            }
+            rs.close();
+        } catch (SQLException e) {
+            throw new ProjectException(e.getMessage(),e);
+        }
+        return list;
     }
 
     @Override
