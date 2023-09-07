@@ -62,7 +62,19 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
 
     @Override
     public List<Purchase> getByDate(Date date) throws ProjectException {
-        return null;
+        List<Purchase> list = new ArrayList<>();
+        try{
+            PreparedStatement s = getConnection().prepareStatement("select * from Purchase where dateOfRent = ?");
+            s.setDate(1, (java.sql.Date) date);
+            ResultSet rs = s.executeQuery();
+            while(rs.next()){
+                list.add(row2object(rs));
+            }
+            rs.close();
+        }catch (SQLException e){
+            throw new ProjectException(e.getMessage(),e);
+        }
+        return list;
     }
 
     @Override
