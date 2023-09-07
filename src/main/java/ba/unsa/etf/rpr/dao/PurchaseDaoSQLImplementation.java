@@ -79,7 +79,16 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
 
     @Override
     public Purchase row2object(ResultSet rs) throws ProjectException {
-        return null;
+        try{
+            Purchase p = new Purchase();
+            p.setId(rs.getInt("id"));
+            p.setUser(DaoFactory.userDao().getById(rs.getInt("user")));
+            p.setBook(DaoFactory.bookDao().getById(rs.getInt("book")));
+            p.setDateOfRent(rs.getDate("dateOfRent"));
+            return p;
+        } catch (SQLException e) {
+            throw new ProjectException(e.getMessage(),e);
+        }
     }
 
     @Override
