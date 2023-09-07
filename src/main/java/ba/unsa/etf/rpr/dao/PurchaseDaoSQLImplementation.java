@@ -8,10 +8,7 @@ import ba.unsa.etf.rpr.exceptions.ProjectException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implements PurchaseDao {
     private static PurchaseDaoSQLImplementation instance = null;
@@ -93,6 +90,11 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
 
     @Override
     public Map<String, Object> object2row(Purchase object) {
-        return null;
+        Map<String, Object> map = new TreeMap<>();
+        map.put("id", object.getId());
+        map.put("book", object.getBook().getId());
+        map.put("dateOfRent", object.getDateOfRent());
+        map.put("user",object.getUser().getId());
+        return map;
     }
 }
