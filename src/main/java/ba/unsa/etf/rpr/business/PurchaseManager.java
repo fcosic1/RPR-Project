@@ -16,4 +16,7 @@ public class PurchaseManager {
     public Purchase add(Purchase item) throws ProjectException {
         return DaoFactory.purchaseDao().add(item);
     }
+    public Purchase update(Purchase item) throws ProjectException {
+        return DaoFactory.purchaseDao().update(item);
+    }
 }
