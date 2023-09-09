@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
 
@@ -25,16 +26,16 @@ public class LoginController {
         try{
             userManager.checkLogIn(fieldUsername.getText(),fieldPassword.getText());
         } catch (Exception e) {
-            AlertDisplay.showAlert("Error","Invalid input!",e.getMessage());
+            //AlertDisplay.showAlert("Error","Invalid input!",e.getMessage());
             return;
         }
         Stage stage=(Stage) fieldUsername.getScene().getWindow();
         stage.close();
         Stage stage1 = new Stage();
-        //FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
-        //Parent root = fxmlloader.load();
-        //stage1.setScene(new Scene(root,600,430));
-        //HomeController homecontroller = fxmlloader.getController();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
+        Parent root = fxmlloader.load();
+        stage1.setScene(new Scene(root,600,430));
+        HomeController homecontroller = fxmlloader.getController();
         //homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
         stage1.show();
         username=fieldUsername.getText();
