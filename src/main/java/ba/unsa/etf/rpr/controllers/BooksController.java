@@ -5,6 +5,8 @@ import ba.unsa.etf.rpr.business.PurchaseManager;
 import ba.unsa.etf.rpr.business.UserManager;
 import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.Purchase;
+import ba.unsa.etf.rpr.domain.User;
+import ba.unsa.etf.rpr.exceptions.ProjectException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -85,5 +87,27 @@ public class BooksController implements Initializable {
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
         else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+SignupController.username + "!");
         stage.setScene(new Scene(root,600,430));
+    }
+
+    public void actionBuy(ActionEvent actionEvent) {
+        Book book = (Book) user_table.getSelectionModel().getSelectedItem();
+        if(book==null){
+            ShowAlert.showAlert("Warning","No books selected","Please select book that you want to purchase");
+            return;
+        }
+
+        User user;
+        if(LoginController.getUsername() != null)
+            user = userManager.searchByUsername(LoginController.getUsername());
+        else
+            user = userManager.searchByUsername(SignupController.username);
+        try{
+            PurchaseManager purchaseManager=new PurchaseManager();
+            purchaseManager.isPurchaseAlreadyMade(user,book);
+        } catch (ProjectException e) {
+            ShowAlert.showAlert("Warning", "Book purchase error", "You already purchased this book");
+        }
+        java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
+        purchaseManager.add(new Purchase(book,user,date));
     }
 }
