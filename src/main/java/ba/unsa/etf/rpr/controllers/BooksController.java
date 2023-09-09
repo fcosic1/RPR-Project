@@ -110,4 +110,11 @@ public class BooksController implements Initializable {
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
         purchaseManager.add(new Purchase(book,user,date));
     }
+    public void showMyBooks(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) user_table.getScene().getWindow();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mybooks.fxml"));
+        Parent root = fxmlloader.load();
+        stage.setTitle("My Books");
+        stage.setScene(new Scene(root,600,430));
+    }
 }
