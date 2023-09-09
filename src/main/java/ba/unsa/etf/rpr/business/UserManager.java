@@ -1,9 +1,28 @@
 package ba.unsa.etf.rpr.business;
 
+import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 
+import java.util.List;
+
 public class UserManager {
+
+    public List<User> getAll() throws ProjectException {
+        return DaoFactory.userDao().getAll();
+    }
+    public void delete(int id) throws ProjectException {
+        DaoFactory.userDao().delete(id);
+    }
+    public User add(User item) throws ProjectException{
+        return DaoFactory.userDao().add(item);
+    }
+    public User update(User item) throws ProjectException{
+        return DaoFactory.userDao().update(item);
+    }
+    public User searchByUsername(String username) throws ProjectException {
+        return DaoFactory.userDao().searchByUsername(username);
+    }
     public void checkUsername(String username){
         if(username.trim().isEmpty() )
             throw new ProjectException("Username field empty");
