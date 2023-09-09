@@ -37,7 +37,7 @@
                 </Label>
                 <TableView fx:id="myBooksTable" prefHeight="363.0" prefWidth="481.0">
                     <columns>
-                        <TableColumn fx:id="book_title" prefWidth="96.0" text="Title" />
+                        <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
                         <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" text="Price" />
                         <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" text="Author" />
                         <TableColumn fx:id="column_bookType" prefWidth="78.0" text="Book type" />
