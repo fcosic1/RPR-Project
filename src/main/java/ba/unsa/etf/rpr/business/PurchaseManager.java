@@ -10,4 +10,7 @@ public class PurchaseManager {
     public List<Purchase> getAll() throws ProjectException {
         return DaoFactory.purchaseDao().getAll();
     }
+    public void delete(int id) throws ProjectException {
+        DaoFactory.purchaseDao().delete(id);
+    }
 }
