@@ -16,7 +16,6 @@ public class AppFx extends Application {
         stage.setTitle("Book rent");
         stage.setResizable(false);
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-
         stage.show();
     }
 
