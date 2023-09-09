@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserManager {
@@ -40,5 +41,9 @@ public class UserManager {
         User user = userManager.searchByUsername(username);
         if(user == null) throw new ProjectException("No user is registered with given username!");
         if(!user.getPassword().equals(password)) throw new ProjectException("Password incorrect!");
+    }
+    public void checkFieldEmpty(ArrayList<String> fields){
+        for(String s : fields)
+            if(s.trim().isEmpty()) throw new ProjectException("Text field cannot be blank!");
     }
 }
