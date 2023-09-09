@@ -16,4 +16,7 @@ public class BookManager {
     public Book add(Book item) throws ProjectException{
         return DaoFactory.bookDao().add(item);
     }
+    public Book update(Book item) throws ProjectException{
+        return DaoFactory.bookDao().update(item);
+    }
 }
