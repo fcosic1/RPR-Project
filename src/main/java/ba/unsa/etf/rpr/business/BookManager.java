@@ -19,4 +19,7 @@ public class BookManager {
     public Book update(Book item) throws ProjectException{
         return DaoFactory.bookDao().update(item);
     }
+    public List<Book> searchByBookTitle(String title){
+        return DaoFactory.bookDao().searchByBookTitle(title);
+    }
 }
