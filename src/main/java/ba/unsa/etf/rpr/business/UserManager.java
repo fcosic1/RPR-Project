@@ -46,4 +46,12 @@ public class UserManager {
         for(String s : fields)
             if(s.trim().isEmpty()) throw new ProjectException("Text field cannot be blank!");
     }
+    public void checkUsernameForRegistration(String username){
+        if(username.trim().isEmpty() )
+            throw new ProjectException("Username field empty");
+        else if(username.trim().length()<5 || username.trim().length()>15)
+            throw new ProjectException("Username needs to be between 5 and 15 characters long!");
+        else if (searchByUsername(username.trim()) != null)
+            throw new ProjectException("Account with given username already exists!");
+    }
 }
