@@ -39,7 +39,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
         </Label>
-        <TextField fx:id="fieldSurname" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <TextField fx:id="fieldLastname" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
             <GridPane.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </GridPane.margin>
@@ -48,7 +48,7 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-        <TextField fx:id="fieldMail" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <TextField fx:id="fieldEmail" GridPane.columnIndex="1" GridPane.rowIndex="3">
             <GridPane.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </GridPane.margin>
@@ -75,11 +75,11 @@
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </GridPane.margin>
         </PasswordField>
-        <Button fx:id="buttonRegister" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="31.0" prefWidth="154.0" text="Register" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+        <Button fx:id="buttonRegister" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="37.0" prefWidth="265.0" style="-fx-background-color: #F0FFFF;" text="Register" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="16.0" />
          </font></Button>
-        <Label prefHeight="17.0" prefWidth="144.0" text="" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+        <Label prefHeight="17.0" prefWidth="144.0" text="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7">
             <GridPane.margin>
                 <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
             </GridPane.margin>
@@ -88,6 +88,9 @@
             <GridPane.margin>
                 <Insets left="-10.0" />
             </GridPane.margin>
+         <font>
+            <Font size="15.0" />
+         </font>
         </Button>
     </children>
 </GridPane>
