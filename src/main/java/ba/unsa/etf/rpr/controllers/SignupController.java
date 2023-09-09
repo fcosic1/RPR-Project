@@ -51,6 +51,8 @@ public class SignupController {
         username=fieldUsername.getText().trim();
     }
 
+
+
     public void buttonLogIn(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) fieldPassword.getScene().getWindow();
         stage.close();
