@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.business;
 
 import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.Purchase;
+import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.util.List;
@@ -18,5 +20,17 @@ public class PurchaseManager {
     }
     public Purchase update(Purchase item) throws ProjectException {
         return DaoFactory.purchaseDao().update(item);
+    }
+    public void isPurchaseAlreadyMade(User user, Book book) {
+
+        PurchaseManager purchaseManager = new PurchaseManager();
+        List<Purchase> purchaseList = purchaseManager.getAll();
+
+
+        for (int i = 0; i < purchaseList.size(); i++) {
+            if (purchaseList.get(i).getBook().getId() == book.getId() && purchaseList.get(i).getUser().getId() == user.getId()) {
+                throw new ProjectException("This purchase has already been made");
+            }
+        }
     }
 }
