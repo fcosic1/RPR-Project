@@ -47,7 +47,7 @@ public class User implements Idable {
     }
 
     public String getLastName() {
-        return getLastName();
+        return lastName;
     }
 
     public void setLastName(String surname) {

@@ -20,7 +20,7 @@ import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 public class SignupController {
     public Button buttonRegister;
     public TextField fieldName;
-    public TextField fieldLastName;
+    public TextField fieldLastname;
     public TextField fieldEmail;
     public TextField fieldUsername;
     public PasswordField fieldPassword;
@@ -30,7 +30,7 @@ public class SignupController {
 
     public void buttonRegister(ActionEvent actionEvent) throws IOException {
         try{
-            userManager.checkFieldEmpty(new ArrayList<String>(Arrays.asList(fieldName.getText(),fieldLastName.getText(),
+            userManager.checkFieldEmpty(new ArrayList<String>(Arrays.asList(fieldName.getText(),fieldLastname.getText(),
                     fieldEmail.getText(),fieldUsername.getText(),fieldPassword.getText())));
             userManager.checkUsernameForRegistration(fieldUsername.getText());
             userManager.checkPassword(fieldPassword.getText());
@@ -38,7 +38,7 @@ public class SignupController {
             //AlertDisplay.showAlert("Error", "Registration failed", e.getMessage());
             return;
         }
-        userManager.add(new User(fieldName.getText().trim(),fieldLastName.getText().trim(),fieldEmail.getText().trim(),fieldUsername.getText().trim(),fieldPassword.getText().trim()));
+        userManager.add(new User(fieldName.getText().trim(),fieldLastname.getText().trim(),fieldEmail.getText().trim(),fieldUsername.getText().trim(),fieldPassword.getText().trim()));
         Stage stage=(Stage) fieldUsername.getScene().getWindow();
         stage.close();
         Stage stage1 = new Stage();
