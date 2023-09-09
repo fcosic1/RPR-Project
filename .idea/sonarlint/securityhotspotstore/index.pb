@@ -7,8 +7,6 @@ b
 2src/main/java/ba/unsa/etf/rpr/dao/PurchaseDao.java,2\4\24d1e29b7d1d833405fe2821dc4db50a07d9167a
 s
 Csrc/main/java/ba/unsa/etf/rpr/dao/PurchaseDaoSQLImplementation.java,0\8\0823c15ae0c80a68f34161bca8f3890b62d3376f
-^
-.src/main/java/ba/unsa/etf/rpr/domain/Book.java,7\1\71e60dc6ae7fe5e1c87d828ad9c9a9cdaf83178f
 w
 G.idea/sonarlint/issuestore/2/4/24d1e29b7d1d833405fe2821dc4db50a07d9167a,9\a\9a999c4c554c027d52459d567a2810a789b2d9c2
 Å
@@ -25,8 +23,6 @@ o
 ?src/main/java/ba/unsa/etf/rpr/dao/BookDaoSQLImplementation.java,1\f\1f8c31b7842e503addaf80b4dd052b09ccfc12fe
 ^
 .src/main/java/ba/unsa/etf/rpr/dao/BookDao.java,b\2\b287f5ccacea4c8ccc5e1075c4529b849d5b840c
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 V
 &src/main/java/ba/unsa/etf/rpr/App.java,7\f\7f80be23c31efea6fdc4338210435b76e867c1e1
 a
