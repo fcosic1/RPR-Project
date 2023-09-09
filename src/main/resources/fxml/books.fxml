@@ -34,7 +34,7 @@
                 </VBox>
                 <TableView fx:id="user_table" prefHeight="387.0" prefWidth="572.0">
                     <columns>
-                        <TableColumn fx:id="book_title" prefWidth="96.0" text="Title" />
+                        <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
                         <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" text="Price" />
                         <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" text="Author" />
                         <TableColumn fx:id="column_ageOfBook" prefWidth="96.0" text="Age of book" />
