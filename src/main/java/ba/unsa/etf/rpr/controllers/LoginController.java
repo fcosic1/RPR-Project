@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.business.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,12 +18,12 @@ public class LoginController {
     public PasswordField fieldPassword;
 
     public static String username ;
-    private final UserManager customerManager=new UserManager();
+    private final UserManager userManager=new UserManager();
 
 
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
         try{
-            usermanager.checkLogIn(fieldUsername.getText(),fieldPassword.getText());
+            userManager.checkLogIn(fieldUsername.getText(),fieldPassword.getText());
         } catch (Exception e) {
             AlertDisplay.showAlert("Error","Invalid input!",e.getMessage());
             return;
