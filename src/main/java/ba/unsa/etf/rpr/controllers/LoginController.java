@@ -28,7 +28,7 @@ public class LoginController {
         try{
             userManager.checkLogIn(fieldUsername.getText(),fieldPassword.getText());
         } catch (Exception e) {
-            //AlertDisplay.showAlert("Error","Invalid input!",e.getMessage());
+            ShowAlert.showAlert("Error","Invalid input!",e.getMessage());
             return;
         }
         Stage stage=(Stage) fieldUsername.getScene().getWindow();

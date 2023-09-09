@@ -35,7 +35,7 @@ public class SignupController {
             userManager.checkUsernameForRegistration(fieldUsername.getText());
             userManager.checkPassword(fieldPassword.getText());
         } catch (Exception e) {
-            //AlertDisplay.showAlert("Error", "Registration failed", e.getMessage());
+            ShowAlert.showAlert("Error", "Registration failed", e.getMessage());
             return;
         }
         userManager.add(new User(fieldName.getText().trim(),fieldLastname.getText().trim(),fieldEmail.getText().trim(),fieldUsername.getText().trim(),fieldPassword.getText().trim()));
