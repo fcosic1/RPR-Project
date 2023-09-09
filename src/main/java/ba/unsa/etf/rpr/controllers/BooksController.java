@@ -75,4 +75,15 @@ public class BooksController implements Initializable {
         sortedData.comparatorProperty().bind(user_table.comparatorProperty());
         user_table.setItems(sortedData);
     }
+
+    public void showHome(ActionEvent actionEvent) throws Exception{
+        Stage stage=(Stage) user_table.getScene().getWindow();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
+        Parent root = fxmlloader.load();
+        HomeController homecontroller = fxmlloader.getController();
+        if(LoginController.getUsername() != null)
+            homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
+        else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+SignupController.username + "!");
+        stage.setScene(new Scene(root,600,430));
+    }
 }
