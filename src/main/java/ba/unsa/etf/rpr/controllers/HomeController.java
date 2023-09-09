@@ -21,7 +21,7 @@ public class HomeController {
     public Label labelWelcome;
 
 
-   /*public void showBooks(ActionEvent actionEvent) throws IOException {
+   public void showBooks(ActionEvent actionEvent) throws IOException {
         Stage stage1=(Stage) menu.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/books.fxml"));
         Parent root = fxmlloader.load();
@@ -30,13 +30,13 @@ public class HomeController {
     }
 
 
-    public void showMyMovies(ActionEvent actionEvent) throws IOException {
+    public void showMyBooks(ActionEvent actionEvent) throws IOException {
         Stage stage1=(Stage) menu.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mybooks.fxml"));
         Parent root = fxmlloader.load();
         stage1.setTitle("My Books");
         stage1.setScene(new Scene(root,600,390));
-    }*/
+    }
 
 
     public void showLogin(ActionEvent actionEvent) throws IOException {
