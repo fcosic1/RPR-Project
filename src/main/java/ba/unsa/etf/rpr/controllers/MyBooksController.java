@@ -68,5 +68,8 @@ public class MyBooksController implements Initializable {
     public void showBooks(ActionEvent actionEvent) throws IOException {
         switchScene("books");
     }
+    public void showHome(ActionEvent actionEvent) throws IOException {
+        switchScene("home");
+    }
 }
 
