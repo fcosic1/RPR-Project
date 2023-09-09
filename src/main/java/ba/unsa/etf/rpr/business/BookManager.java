@@ -10,5 +10,7 @@ public class BookManager {
     public List<Book> getAll() throws ProjectException {
         return DaoFactory.bookDao().getAll();
     }
-
+    public void delete(int id) throws ProjectException {
+        DaoFactory.bookDao().delete(id);
+    }
 }
