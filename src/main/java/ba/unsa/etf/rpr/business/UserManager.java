@@ -29,13 +29,16 @@ public class UserManager {
         else if(username.trim().length()<5 || username.trim().length()>15)
             throw new ProjectException("Username needs to be between 5 and 15 characters long!");
     }
-
+    public void checkPassword(String password){
+        if(password.trim().isEmpty()) throw new ProjectException("Password field empty");
+        else if(password.trim().length()<8 || password.trim().length()>20) throw new ProjectException("Password needs to be between 8 and 20 characters long!");
+    }
     public void checkLogIn(String username, String password){
         checkUsername(username);
-        //checkPassword(password);
+        checkPassword(password);
         UserManager userManager=new UserManager();
-        //User user = userManager.searchByUsername(username);
-        //if(user == null) throw new ProjectException("No user is registered with given username!");
-        //if(!user.getPassword().equals(password)) throw new ProjectException("Password incorrect!");
+        User user = userManager.searchByUsername(username);
+        if(user == null) throw new ProjectException("No user is registered with given username!");
+        if(!user.getPassword().equals(password)) throw new ProjectException("Password incorrect!");
     }
 }
