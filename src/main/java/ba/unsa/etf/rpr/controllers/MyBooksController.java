@@ -1,4 +1,13 @@
 package ba.unsa.etf.rpr.controllers;
 
-public class MyBooksController {
+import javafx.fxml.Initializable;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MyBooksController implements Initializable {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
