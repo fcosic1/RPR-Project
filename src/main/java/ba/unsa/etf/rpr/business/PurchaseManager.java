@@ -13,4 +13,7 @@ public class PurchaseManager {
     public void delete(int id) throws ProjectException {
         DaoFactory.purchaseDao().delete(id);
     }
+    public Purchase add(Purchase item) throws ProjectException {
+        return DaoFactory.purchaseDao().add(item);
+    }
 }
