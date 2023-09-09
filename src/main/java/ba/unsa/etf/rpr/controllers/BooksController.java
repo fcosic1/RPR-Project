@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.business.BookManager;
+import ba.unsa.etf.rpr.business.PurchaseManager;
 import ba.unsa.etf.rpr.business.UserManager;
 import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.Purchase;
@@ -47,4 +49,8 @@ public class BooksController implements Initializable {
     private final UserManager userManager = new UserManager();
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
