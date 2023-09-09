@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.business.PurchaseTableView;
 import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.Purchase;
 import ba.unsa.etf.rpr.domain.User;
@@ -73,7 +74,34 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
         }
         return list;
     }
+    @Override
+    public List<PurchaseTableView> getMyBooks(String username) throws ProjectException {
 
+        List<PurchaseTableView> list = new ArrayList<>();
+        try {
+            PreparedStatement s = getConnection().prepareStatement("select b.bookTitle as bookTitle, b.price as price, b.author as author,p.dateOfRent as dateOfRent, b.bookType as bookType,  from Book b, Purchase p, User u where b.id=p.book and u.id=p.user and u.username=?");
+            s.setString(1, username);
+            ResultSet rs = s.executeQuery();
+            while (rs.next()) {
+                try{
+                    PurchaseTableView p = new PurchaseTableView();
+                    p.setBookTitle(rs.getString("bookTitle"));
+                    p.setPrice(rs.getDouble("price"));
+                    p.setAuthor(rs.getString("author"));
+                    p.setBookType(rs.getString("bookType"));
+
+                    p.setPurchase_date(rs.getDate("dateOfRent"));
+                    list.add(p);
+                } catch (SQLException e) {
+                    throw new ProjectException(e.getMessage(),e);
+                }
+            }
+            rs.close();
+        } catch (SQLException e) {
+            throw new ProjectException(e.getMessage(),e);
+        }
+        return list;
+    }
     @Override
     public Purchase row2object(ResultSet rs) throws ProjectException {
         try{

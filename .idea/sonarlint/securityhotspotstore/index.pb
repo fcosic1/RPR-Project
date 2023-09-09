@@ -3,10 +3,6 @@
 RPR-Project.iml,5\1\51bc9e7b2cf4b4c8e1ff11de0c5c4fafc0006d4c
 N
 src/main/resources/MANIFEST.MF,4\8\48049259330c31e1e195c7757756daa5984a1c01
-b
-2src/main/java/ba/unsa/etf/rpr/dao/PurchaseDao.java,2\4\24d1e29b7d1d833405fe2821dc4db50a07d9167a
-s
-Csrc/main/java/ba/unsa/etf/rpr/dao/PurchaseDaoSQLImplementation.java,0\8\0823c15ae0c80a68f34161bca8f3890b62d3376f
 w
 G.idea/sonarlint/issuestore/2/4/24d1e29b7d1d833405fe2821dc4db50a07d9167a,9\a\9a999c4c554c027d52459d567a2810a789b2d9c2
 Å
@@ -27,8 +23,6 @@ V
 &src/main/java/ba/unsa/etf/rpr/App.java,7\f\7f80be23c31efea6fdc4338210435b76e867c1e1
 a
 1src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java,1\d\1d4d726c175f76400bdd70ae701a9db1546e2c4d
-b
-2src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java,5\7\57507653d3cc2897e4c1a2a493815c4dfcd600c7
 w
 G.idea/sonarlint/issuestore/7/e/7ecb54ef3982f106f0c6351b0f5bcbb654f53254,7\8\781e77d92b1e08e6ad8ead3c2d659b2d6e01fe73
 w
