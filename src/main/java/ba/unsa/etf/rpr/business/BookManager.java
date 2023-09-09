@@ -13,4 +13,7 @@ public class BookManager {
     public void delete(int id) throws ProjectException {
         DaoFactory.bookDao().delete(id);
     }
+    public Book add(Book item) throws ProjectException{
+        return DaoFactory.bookDao().add(item);
+    }
 }
