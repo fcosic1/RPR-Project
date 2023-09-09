@@ -46,7 +46,7 @@ public class SignupController {
         Parent root = fxmlloader.load();
         stage1.setScene(new Scene(root,600,430));
         HomeController homecontroller = fxmlloader.getController();
-        //homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
+        homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
         stage1.show();
         username=fieldUsername.getText().trim();
     }
