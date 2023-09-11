@@ -9,8 +9,7 @@ import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit test for simple App.
@@ -44,6 +43,15 @@ public class AppTest
     public void passwordLogInTest(){
         assertThrows(ProjectException.class,()->{
             userManager.checkPassword("abcdefghkhkhkdldlslkksd");
+        });
+    }
+
+
+
+    @Test
+    public void LogInTest(){
+        assertDoesNotThrow(()->{
+            userManager.checkLogIn("hamohamic","hamohamic");
         });
     }
 
