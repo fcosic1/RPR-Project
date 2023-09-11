@@ -7,7 +7,9 @@ import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.util.List;
-
+/**
+ * Business Logic Layer for management of Purchases
+ */
 public class PurchaseManager {
     public List<Purchase> getAll() throws ProjectException {
         return DaoFactory.purchaseDao().getAll();
@@ -21,6 +23,7 @@ public class PurchaseManager {
     public Purchase update(Purchase item) throws ProjectException {
         return DaoFactory.purchaseDao().update(item);
     }
+    /** Da li je kupovina izvrsena*/
     public void isPurchaseAlreadyMade(User user, Book book) {
 
         PurchaseManager purchaseManager = new PurchaseManager();
