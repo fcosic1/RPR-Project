@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
+/** Klasa za korisnika */
 public class User implements Idable {
 
     private int id;
