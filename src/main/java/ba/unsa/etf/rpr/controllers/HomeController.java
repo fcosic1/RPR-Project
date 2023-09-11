@@ -15,6 +15,7 @@ import java.io.IOException;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
+/**Controller class which controls everything behind the home display of the app*/
 public class HomeController {
     public MenuItem buttonBooks;
     public MenuItem buttonMyBooks;
@@ -22,7 +23,7 @@ public class HomeController {
 
     public Label labelWelcome;
 
-
+    /**to display book display */
    public void showBooks(ActionEvent actionEvent) throws IOException {
         Stage stage1=(Stage) menu.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/books.fxml"));
@@ -31,7 +32,7 @@ public class HomeController {
         stage1.setScene(new Scene(root,600,390));
     }
 
-
+    /**to display mybooks*/
     public void showMyBooks(ActionEvent actionEvent) throws IOException {
         Stage stage1=(Stage) menu.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mybooks.fxml"));
@@ -40,7 +41,7 @@ public class HomeController {
         stage1.setScene(new Scene(root,600,390));
     }
 
-
+    /**method to show login screen*/
     public void showLogin(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) menu.getScene().getWindow();
         Stage stage1 = new Stage();
