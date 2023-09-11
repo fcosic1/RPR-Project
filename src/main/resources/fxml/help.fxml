@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -37,14 +35,14 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPomoc" mnemonicParsing="false" style="-fx-background-color: rgb(36,140,255)" text="Pomoć" underline="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnPomoc" mnemonicParsing="false" style="-fx-background-color: #f0ffff;" text="Pomoć" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
                             <padding>
                                 <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                             </padding></Button>
-                        <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama"  text="O nama" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" style="-fx-background-color: #f0ffff;" text="O nama" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
@@ -61,14 +59,14 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
-                <Label text="Ukoliko imate nekih pitanja o našim knjigama ili želite preporuku našeg stručnog tima, budite slobodni da nas kontaktirate na e-mail eBook@gmail.com" textAlignment="JUSTIFY" textFill="#15006b" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                <Label text="Ukoliko imate nekih pitanja o našim knjigama ili želite preporuku našeg stručnog tima, budite slobodni da nas kontaktirate na e-mail eBook@gmail.com" textAlignment="JUSTIFY" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                     <font>
                         <Font name="Times New Roman" size="16.0" />
                     </font>
                     <GridPane.margin>
                         <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
                     </GridPane.margin></Label>
-                <Label layoutX="10.0" layoutY="248.0" text="Ukoliko želite da nam pošaljete svoju recenziju, kontaktirajte nas na e-mail eBook@gmail.com" textAlignment="JUSTIFY" textFill="#10006c" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                <Label layoutX="10.0" layoutY="248.0" text="Ukoliko želite da nam pošaljete svoju recenziju, kontaktirajte nas na e-mail eBook@gmail.com" textAlignment="JUSTIFY" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                     <GridPane.margin>
                         <Insets left="30.0" right="30.0" top="10.0" />
                     </GridPane.margin>
@@ -76,9 +74,9 @@
                         <Font name="Times New Roman" size="16.0" />
                     </font>
                 </Label>
-                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" prefHeight="40.0" prefWidth="120.0" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #f0ffff;" text="ZATVORI" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                     <font>
-                        <Font name="Times New Roman" size="14.0" />
+                        <Font name="Times New Roman Bold" size="15.0" />
                     </font></Button>
             </children>
         </GridPane>
