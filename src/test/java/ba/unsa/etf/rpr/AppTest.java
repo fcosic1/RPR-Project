@@ -9,6 +9,7 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.dao.PurchaseDao;
 import ba.unsa.etf.rpr.dao.UserDao;
 import ba.unsa.etf.rpr.domain.Book;
+import ba.unsa.etf.rpr.domain.Purchase;
 import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 import org.junit.jupiter.api.BeforeAll;
@@ -141,6 +142,23 @@ public class AppTest
         UserManager um=new UserManager();
         User u1=um.searchByUsername(username);
         assertEquals("fcosic",u1.getUsername());
+    }
+    @Test
+    public void AlreadyRegistered(){
+        Book book = new Book();
+        book.setBookTitle("aa");  book.setPrice(30); book.setBookType("com"); book.setAgeOfBook(Date.valueOf(LocalDate.now()));
+        book.setAuthor("dsdsd");
+        User user = new User();
+        user.setPassword("dsadasdas"); user.setFirstName("a"); user.setLastName("b"); user.setEmail("asdas"); user.setUsername("dsadasdasd");
+        Purchase purchase = new Purchase();
+        purchase.setBook(book);
+        purchase.setUser(user);
+        purchase.setDateOfRent(Date.valueOf(LocalDate.now()));
+        List<Purchase> list1= new ArrayList<>();
+        list1.add(purchase);
+        when(purchaseDaoMock.getAll()).thenReturn(list1);
+        List<Purchase> list = purchaseManager.getAll();
+        assertEquals(list.get(0).getUser().getUsername(),purchase.getUser().getUsername());
     }
 
 
