@@ -23,7 +23,7 @@ public class LoginController {
     public static String username ;
     private final UserManager userManager=new UserManager();
 
-
+    /**method which represents logging in the app*/
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
         try{
             userManager.checkLogIn(fieldUsername.getText(),fieldPassword.getText());
@@ -47,6 +47,7 @@ public class LoginController {
     public static String getUsername(){
         return username;
     }
+    /**method switches scene and displays the registration display **/
     public void registerButton(ActionEvent actionevent) throws IOException {
         Stage stage1=(Stage) fieldUsername.getScene().getWindow();
         stage1.close();

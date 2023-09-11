@@ -14,7 +14,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class HelpController {
 
         public Button btnZatvori, btnONama;
-
+        /** događaj otvaranje about us prozora*/
         public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
             try {
                 Stage stage =(Stage)btnONama.getScene().getWindow();
