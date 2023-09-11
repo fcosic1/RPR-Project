@@ -35,14 +35,14 @@
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" prefHeight="38.0" prefWidth="91.0" text="O nama">
+                <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" prefHeight="28.0" prefWidth="81.0" text="About us">
                     <font>
-                        <Font name="Times New Roman" size="15.0" />
+                        <Font size="15.0" />
                     </font>
-                    <padding>
-                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
-                    </padding></Button>
-                <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" prefHeight="38.0" prefWidth="92.0" text="Pomoć">
+                    <VBox.margin>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" prefHeight="38.0" prefWidth="92.0" text="Help">
                     <font>
                         <Font name="Times New Roman" size="15.0" />
                     </font>
