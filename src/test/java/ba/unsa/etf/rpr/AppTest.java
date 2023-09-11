@@ -66,6 +66,13 @@ public class AppTest
         assertEquals(u.getFirstName(),"faris");
     }*/
 
+    /**test to search by lastName*/
+    @Test
+    public void searchByLastName(){
+        User u = userManager.searchByUsername("fcosic");
+        assertEquals(u.getLastName(),"");
+    }
+
     /**test for adding book in database*/
     @Test
     public void addBook(){
