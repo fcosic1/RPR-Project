@@ -28,7 +28,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-
+/**Controller class which controls everything behind the books display of the app*/
 public class BooksController implements Initializable {
     @FXML
     public TableColumn column_title;
@@ -50,7 +50,8 @@ public class BooksController implements Initializable {
     private final PurchaseManager purchaseManager = new PurchaseManager();
     private final UserManager userManager = new UserManager();
 
-
+    /** method which is used to set the tableview before displaying the window
+        * it also implements searching of movies using a listener*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Book> list = bookManager.getAll();
@@ -77,7 +78,7 @@ public class BooksController implements Initializable {
         sortedData.comparatorProperty().bind(user_table.comparatorProperty());
         user_table.setItems(sortedData);
     }
-
+    /**method to show home screen*/
     public void showHome(ActionEvent actionEvent) throws Exception{
         Stage stage=(Stage) user_table.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
