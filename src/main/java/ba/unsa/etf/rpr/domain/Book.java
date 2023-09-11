@@ -3,6 +3,8 @@ package ba.unsa.etf.rpr.domain;
 import java.util.Date;
 import java.util.Objects;
 
+
+/** Class Book koja sadrzi sve dostupne knjige */
 public class Book implements Idable{
 
     private int id;
