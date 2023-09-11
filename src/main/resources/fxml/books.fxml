@@ -34,10 +34,10 @@
                 </VBox>
                 <TableView fx:id="user_table" prefHeight="387.0" prefWidth="572.0">
                     <columns>
-                        <TableColumn fx:id="column_title" prefWidth="96.0" style="-fx-background-color: #f0ffff;" text="Title" />
-                        <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" style="-fx-background-color: #f0ffff;" text="Price" />
-                        <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" style="-fx-background-color: #f0ffff;" text="Author" />
-                        <TableColumn fx:id="column_date" minWidth="2.0" prefWidth="101.0" style="-fx-background-color: #f0ffff;" text="Age of book" />
+                        <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
+                        <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" text="Price" />
+                        <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" text="Author" />
+                        <TableColumn fx:id="column_date" minWidth="2.0" prefWidth="101.0" text="Age of book" />
                         <TableColumn fx:id="column_bookType" prefWidth="78.0" style="-fx-background-color: #f0ffff;" text="Book type" />
 
                     </columns>
