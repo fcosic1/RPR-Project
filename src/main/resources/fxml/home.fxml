@@ -9,7 +9,7 @@
     <left>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
             <children>
-                <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="Home">
+                <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #f0ffff;" text="Home">
                     <items>
                         <MenuItem fx:id="buttonBooks" mnemonicParsing="false" onAction="#showBooks" text="Books" />
                         <MenuItem fx:id="buttonMyBooks" mnemonicParsing="false" onAction="#showMyBooks" text="My books" />
@@ -35,20 +35,20 @@
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" prefHeight="28.0" prefWidth="81.0" text="About us">
+                <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" prefHeight="28.0" prefWidth="81.0" style="-fx-background-color: #f0ffff;" text="About us">
                     <font>
-                        <Font size="15.0" />
+                        <Font size="13.0" />
                     </font>
                     <VBox.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" prefHeight="38.0" prefWidth="92.0" text="Help">
-                    <font>
-                        <Font name="Times New Roman" size="15.0" />
-                    </font>
-                    <padding>
-                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
-                    </padding></Button>
+                <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #f0ffff;" text="Help">
+                    <VBox.margin>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                    </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
             </children>
 
         </VBox>

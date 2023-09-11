@@ -9,7 +9,7 @@
     <left>
         <VBox prefHeight="464.0" prefWidth="111.0" BorderPane.alignment="CENTER">
             <children>
-                <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="90.0" text="My books">
+                <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: #f0ffff;" text="My books">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#showHome" text="Home" />
                         <MenuItem fx:id="showMovies" mnemonicParsing="false" onAction="#showBooks" text="Books" />
@@ -37,7 +37,7 @@
                 </Label>
                 <TableView fx:id="myBooksTable" prefHeight="363.0" prefWidth="481.0">
                     <columns>
-                        <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
+                        <TableColumn fx:id="column_title" prefWidth="96.0" style="-fx-background-color: #f0ffff;" text="Title" />
                         <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" text="Price" />
                         <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" text="Author" />
                         <TableColumn fx:id="column_bookType" prefWidth="78.0" text="Book type" />
