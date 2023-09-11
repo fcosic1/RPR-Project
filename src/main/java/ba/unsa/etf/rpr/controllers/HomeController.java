@@ -52,6 +52,7 @@ public class HomeController {
         stage.show();
     }
 
+    /**method to open help screen*/
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage1 = new Stage();
@@ -67,6 +68,7 @@ public class HomeController {
             System.out.println(e.getMessage());
         }
     }
+    /** method to open aboutus screen*/
     public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
         try {
 
