@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.PopupControl;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -47,6 +49,22 @@ public class HomeController {
         stage.setTitle("Book");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
         stage.show();
+    }
+
+    public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/help.fxml"));
+            HelpController help = new HelpController();
+            fxmlLoader.setController(help);
+            Scene scene = new Scene(fxmlLoader.load(), PopupControl.USE_COMPUTED_SIZE, PopupControl.USE_COMPUTED_SIZE);
+            stage1.setTitle("Pomoć eBook");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }
