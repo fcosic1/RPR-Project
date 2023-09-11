@@ -28,6 +28,8 @@ public class UserManager {
     public User searchByUsername(String username) throws ProjectException {
         return DaoFactory.userDao().searchByUsername(username);
     }
+
+    /**Provjera username, da li je prazno polje i da li je izmedju 5 i 15 karaktera*/
     public void checkUsername(String username){
         if(username.trim().isEmpty() )
             throw new ProjectException("Username field empty");
