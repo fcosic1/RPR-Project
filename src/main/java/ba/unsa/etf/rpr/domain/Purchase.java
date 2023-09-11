@@ -3,6 +3,7 @@ package ba.unsa.etf.rpr.domain;
 import java.util.Date;
 import java.util.Objects;
 
+/** Klasa koja sadrzi sve kupovine knjige */
 public class Purchase implements Idable{
 
     private int id;
