@@ -57,7 +57,7 @@ public class AppTest
             userManager.checkLogIn("hamohamic","hamohamic");
         });
     }
-
+    /** Test for search book by title */
     @Test
     public void searchByTitle(){
         List<Book> list = bookManager.getAll();
