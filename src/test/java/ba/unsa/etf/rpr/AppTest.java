@@ -8,9 +8,11 @@ import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -96,6 +98,19 @@ public class AppTest
         Book book = list.get(1);
         Book book2=bookManager.searchByBookTitle(book.getBookTitle()).get(0);
         assertEquals(book.getBookType(),book2.getBookType());
+    }
+
+    @Test
+    public void checkPassworddTest() {
+        UserManager umm=new UserManager();
+        UserManager um = Mockito.mock(UserManager.class);
+        User u = new User("fatima","cosic","fatcos","fatimaa","12345678");
+        List<User> users=new ArrayList<>();
+        users.add(u);
+        Mockito.when(um.getAll()).thenReturn(users);
+        assertDoesNotThrow(()->{
+            umm.checkPassword(u.getPassword());
+        });
     }
 
 
