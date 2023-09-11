@@ -18,3 +18,5 @@ Project requierments are listed as follows:
 12. 2 design patterns minimum (2 points)
 13. JavaDoc documentation (1 point)
 14. Using .properties files for configuration (1 point).
+
+Since we had the liberty of picking our own project topics, i made a simple app for adding books in library.
