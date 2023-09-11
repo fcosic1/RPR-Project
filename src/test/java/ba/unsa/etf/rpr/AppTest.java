@@ -29,7 +29,9 @@ public class AppTest
     {
         assertTrue( true );
     }
-
+    /**
+     * Test of username to be between 5 and 15 characters
+     */
     @Test
     public void usernameLogInTest()
     {
@@ -37,5 +39,7 @@ public class AppTest
             userManager.checkUsername("aaaa");
         });
     }
+
+
 
 }
