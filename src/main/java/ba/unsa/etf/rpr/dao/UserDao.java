@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.util.List;
 
+/** Dao interface for User domain*/
 public interface UserDao extends Dao<User> {
     List<User> searchByFirstName(String firstName) throws ProjectException;
     List<User> searchByLastName(String lastName) throws ProjectException;
