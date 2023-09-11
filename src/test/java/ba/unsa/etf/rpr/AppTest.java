@@ -47,6 +47,7 @@ public class AppTest
     }
 
 
+    /** Test for user that is already registered */
 
     @Test
     public void LogInTest(){
