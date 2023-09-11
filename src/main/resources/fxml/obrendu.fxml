@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.OBrenduController">
     <center>
         <GridPane BorderPane.alignment="CENTER">
             <columnConstraints>
@@ -23,17 +23,6 @@
                 <RowConstraints />
             </rowConstraints>
             <children>
-                <ImageView fitHeight="93.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
-                    <image>
-                        <Image url="@../images/logoCeraVe.png" />
-                    </image>
-                    <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                    </cursor>
-                    <GridPane.margin>
-                        <Insets left="295.0" />
-                    </GridPane.margin>
-                </ImageView>
                 <GridPane GridPane.columnSpan="2">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -47,7 +36,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPomoc" mnemonicParsing="false" onAction="#actionOtvaranjeHelp" onMouseEntered="#promjenaBoje1" onMouseExited="#vracanjeBoje1" text="Pomoć" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <Button fx:id="btnPomoc" mnemonicParsing="false" onAction="#actionOtvaranjeHelp"  text="Pomoć" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                             <font>
                                 <Font name="Times New Roman" size="15.0" />
                             </font>
@@ -71,7 +60,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
-                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" onMouseEntered="#promjenaBoje" onMouseExited="#vracanjeBoje" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgb(223,223,223); -fx-background-radius: 10px;" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" prefHeight="40.0" prefWidth="120.0" text="ZATVORI" textFill="#10006c" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                     <font>
                         <Font name="Times New Roman" size="14.0" />
                     </font></Button>
