@@ -39,12 +39,14 @@ public class AppTest
             userManager.checkUsername("aaaa");
         });
     }
-
+    /** Test password to be between 8 and 20 characters */
     @Test
     public void passwordLogInTest(){
         assertThrows(ProjectException.class,()->{
             userManager.checkPassword("abcdefghkhkhkdldlslkksd");
         });
     }
+
+
 
 }
