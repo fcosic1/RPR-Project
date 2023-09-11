@@ -9,6 +9,8 @@ import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 import org.junit.jupiter.api.Test;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -56,6 +58,22 @@ public class AppTest
         assertDoesNotThrow(()->{
             userManager.checkLogIn("hamohamic","hamohamic");
         });
+    }
+
+    @Test
+    public void addBook(){
+        Book book = new Book();
+        book.setBookTitle("Na drini cuprija");
+        book.setAuthor("Autor");
+        book.setAgeOfBook(Date.valueOf(LocalDate.now()));
+        book.setBookType("drama");
+        book.setPrice(50);
+        bookManager.add(book);
+        boolean found = false;
+        List<Book> books=bookManager.getAll();
+        Book book1 = books.get(books.size()-1);
+        assertEquals(book.getId(),book1.getId());
+        bookManager.delete(book1.getId());
     }
     /** Test for search book by title */
     @Test
