@@ -38,7 +38,7 @@
                         <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" text="Price" />
                         <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" text="Author" />
                         <TableColumn fx:id="column_date" minWidth="2.0" prefWidth="101.0" text="Age of book" />
-                        <TableColumn fx:id="column_bookType" prefWidth="78.0" style="-fx-background-color: #f0ffff;" text="Book type" />
+                        <TableColumn fx:id="column_bookType" prefWidth="78.0" text="Book type" />
 
                     </columns>
                     <VBox.margin>
