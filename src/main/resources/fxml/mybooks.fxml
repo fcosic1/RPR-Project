@@ -39,9 +39,9 @@
                     <columns>
                         <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
                         <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="64.0" text="Price" />
-                        <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" style="-fx-background-color: #f0ffff;" text="Author" />
-                        <TableColumn fx:id="column_bookType" prefWidth="78.0" style="-fx-background-color: #f0ffff;" text="Book type" />
-                        <TableColumn fx:id="column_date" prefWidth="138.0" style="-fx-background-color: #f0ffff;" text="Date of Purchase" />
+                        <TableColumn fx:id="column_author" minWidth="2.0" prefWidth="101.0" text="Author" />
+                        <TableColumn fx:id="column_bookType" prefWidth="78.0" text="Book type" />
+                        <TableColumn fx:id="column_date" prefWidth="138.0" text="Date of Purchase" />
                     </columns>
                     <VBox.margin>
                         <Insets bottom="20.0" right="50.0" top="10.0" />
