@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Book;
 
+/**Factory for all Dao implementations*/
 public class DaoFactory {
     private static final UserDao userDao = new UserDaoSQLImplementation();
     private static final BookDao bookDao = new BookDaoSQLImplementation();

@@ -7,12 +7,8 @@ w
 G.idea/sonarlint/issuestore/2/4/24d1e29b7d1d833405fe2821dc4db50a07d9167a,9\a\9a999c4c554c027d52459d567a2810a789b2d9c2
 Å
 Q.idea/sonarlint/securityhotspotstore/2/4/24d1e29b7d1d833405fe2821dc4db50a07d9167a,b\f\bf69785c2dffd46a42d8fa3937df6ef1f0c24a8f
-^
-.src/main/java/ba/unsa/etf/rpr/dao/BookDao.java,b\2\b287f5ccacea4c8ccc5e1075c4529b849d5b840c
 Z
 *src/main/java/ba/unsa/etf/rpr/dao/Dao.java,a\1\a1348960998eebe088bc844c2afaaa6dd9d147f9
-a
-1src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java,1\d\1d4d726c175f76400bdd70ae701a9db1546e2c4d
 w
 G.idea/sonarlint/issuestore/7/e/7ecb54ef3982f106f0c6351b0f5bcbb654f53254,7\8\781e77d92b1e08e6ad8ead3c2d659b2d6e01fe73
 w

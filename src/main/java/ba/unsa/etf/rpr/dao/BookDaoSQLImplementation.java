@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+
+/**Implementation of bookDao*/
 public class BookDaoSQLImplementation extends AbstractDao<Book> implements BookDao{
     private static BookDaoSQLImplementation instance = null;
     public static BookDaoSQLImplementation getInstance(){
