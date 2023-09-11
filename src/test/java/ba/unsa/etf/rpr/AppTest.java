@@ -61,6 +61,13 @@ public class AppTest
     }
 
     @Test
+    public void searchByUsername(){
+        User u = userManager.searchByUsername("fcosic");
+        assertEquals(u.getFirstName(),"faris");
+    }
+
+    /**test for adding book in database*/
+    @Test
     public void addBook(){
         Book book = new Book();
         book.setBookTitle("Na drini cuprija");
@@ -83,6 +90,8 @@ public class AppTest
         Book book2=bookManager.searchByBookTitle(book.getBookTitle()).get(0);
         assertEquals(book.getBookType(),book2.getBookType());
     }
+
+
 
 
 
