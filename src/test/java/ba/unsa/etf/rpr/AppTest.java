@@ -23,6 +23,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Unit test for simple App.
@@ -133,6 +134,14 @@ public class AppTest
         daoFactory.when(DaoFactory::userDao).thenReturn(userDaoMock);
     }
 
+    @Test
+    public void searchByUsernameMock(){
+        String username="fcosic";
+        when(userDaoMock.searchByUsername(username)).thenReturn(new User("faris","cosic","fcosic","fcosic","farisfare"));
+        UserManager um=new UserManager();
+        User u1=um.searchByUsername(username);
+        assertEquals("fcosic",u1.getUsername());
+    }
 
 
 
