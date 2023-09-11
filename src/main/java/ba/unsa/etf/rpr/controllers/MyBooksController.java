@@ -50,13 +50,15 @@ public class MyBooksController implements Initializable {
         }
         stage.setScene(new Scene(root,600,430));
     }
-
+    /** method which switches mybooks display to home screen*/
     public void showHome(ActionEvent actionEvent) throws IOException {
         switchScene("home");
     }
+    /**method which displays books screen*/
     public void showBooks(ActionEvent actionEvent) throws IOException {
         switchScene("books");
     }
+    /**method which is used to set the tableview before displaying the window*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<PurchaseTableView> list;
