@@ -51,7 +51,7 @@ public class BooksController implements Initializable {
     private final UserManager userManager = new UserManager();
 
     /** method which is used to set the tableview before displaying the window
-        * it also implements searching of movies using a listener*/
+        * it also implements searching of books using a listener*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Book> list = bookManager.getAll();
@@ -89,7 +89,7 @@ public class BooksController implements Initializable {
         else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+SignupController.username + "!");
         stage.setScene(new Scene(root,600,430));
     }
-
+    /**method which adds the selected movie in the registered user's book collection*/
     public void actionBuy(ActionEvent actionEvent) {
         Book book = (Book) user_table.getSelectionModel().getSelectedItem();
         if(book==null){
@@ -111,6 +111,8 @@ public class BooksController implements Initializable {
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
         purchaseManager.add(new Purchase(book,user,date));
     }
+
+    /**method to show mybooks screen*/
     public void showMyBooks(ActionEvent actionEvent) throws IOException {
         Stage stage=(Stage) user_table.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mybooks.fxml"));
