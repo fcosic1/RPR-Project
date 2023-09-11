@@ -54,7 +54,7 @@ public class HomeController {
     public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage1 = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/help.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/help.fxml"));
             HelpController help = new HelpController();
             fxmlLoader.setController(help);
             Scene scene = new Scene(fxmlLoader.load(), PopupControl.USE_COMPUTED_SIZE, PopupControl.USE_COMPUTED_SIZE);
@@ -70,7 +70,7 @@ public class HomeController {
         try {
 
             Stage stage1 = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/obrendu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/obrendu.fxml"));
             OBrenduController brend = new OBrenduController();
             fxmlLoader.setController(brend);
             Scene scene = new Scene(fxmlLoader.load(), PopupControl.USE_COMPUTED_SIZE, PopupControl.USE_COMPUTED_SIZE);

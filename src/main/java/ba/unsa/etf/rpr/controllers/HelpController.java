@@ -20,7 +20,7 @@ public class HelpController {
                 Stage stage =(Stage)btnONama.getScene().getWindow();
                 stage.close();
                 Stage stage1 = new Stage();
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/obrendu.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/obrendu.fxml"));
                 OBrenduController brend = new OBrenduController();
                 fxmlLoader.setController(brend);
                 Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);

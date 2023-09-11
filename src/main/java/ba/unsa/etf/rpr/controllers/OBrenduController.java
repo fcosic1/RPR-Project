@@ -18,7 +18,7 @@ public class OBrenduController {
                 Stage stage =(Stage)btnPomoc.getScene().getWindow();
                 stage.close();
                 Stage stage1 = new Stage();
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/help.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/help.fxml"));
                 HelpController help = new HelpController();
                 fxmlLoader.setController(help);
                 Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
