@@ -99,7 +99,7 @@ public class AppTest
         Book book2=bookManager.searchByBookTitle(book.getBookTitle()).get(0);
         assertEquals(book.getBookType(),book2.getBookType());
     }
-
+    /** test for checking password */
     @Test
     public void checkPassworddTest() {
         UserManager umm=new UserManager();
