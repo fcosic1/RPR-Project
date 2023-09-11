@@ -50,10 +50,13 @@ public class UserManager {
         if(user == null) throw new ProjectException("No user is registered with given username!");
         if(!user.getPassword().equals(password)) throw new ProjectException("Password incorrect!");
     }
+
+    /**Provjera da li je polje prazno*/
     public void checkFieldEmpty(ArrayList<String> fields){
         for(String s : fields)
             if(s.trim().isEmpty()) throw new ProjectException("Text field cannot be blank!");
     }
+    /**Provjera username za registraciju*/
     public void checkUsernameForRegistration(String username){
         if(username.trim().isEmpty() )
             throw new ProjectException("Username field empty");
