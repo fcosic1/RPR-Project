@@ -6,7 +6,9 @@ import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Business Logic Layer for management of Users
+ */
 public class UserManager {
 
     public List<User> getAll() throws ProjectException {
@@ -21,6 +23,8 @@ public class UserManager {
     public User update(User item) throws ProjectException{
         return DaoFactory.userDao().update(item);
     }
+
+    /**Provjeri koristeci username*/
     public User searchByUsername(String username) throws ProjectException {
         return DaoFactory.userDao().searchByUsername(username);
     }
