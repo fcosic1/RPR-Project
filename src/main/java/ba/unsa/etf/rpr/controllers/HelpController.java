@@ -13,7 +13,6 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class HelpController {
 
-    public class HelpController {
         public Button btnZatvori, btnONama;
 
         public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
@@ -25,7 +24,7 @@ public class HelpController {
                 OBrenduController brend = new OBrenduController();
                 fxmlLoader.setController(brend);
                 Scene scene = new Scene(fxmlLoader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
-                stage1.setTitle("CeraVe");
+                stage1.setTitle("eBook");
                 stage1.setScene(scene);
                 stage1.setResizable(false);
                 stage1.show();
