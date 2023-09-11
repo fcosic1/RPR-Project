@@ -40,6 +40,11 @@ public class AppTest
         });
     }
 
-
+    @Test
+    public void passwordLogInTest(){
+        assertThrows(ProjectException.class,()->{
+            userManager.checkPassword("abcdefghkhkhkdldlslkksd");
+        });
+    }
 
 }
