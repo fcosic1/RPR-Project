@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
+/**Implementation of purchaseDao*/
 public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implements PurchaseDao {
     private static PurchaseDaoSQLImplementation instance = null;
 

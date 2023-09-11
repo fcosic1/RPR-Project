@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
-
+/**Controller class which controls everything behind the signup display*/
 public class SignupController {
     public Button buttonRegister;
     public TextField fieldName;
