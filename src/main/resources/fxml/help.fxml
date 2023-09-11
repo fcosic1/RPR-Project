@@ -74,7 +74,7 @@
                         <Font name="Times New Roman" size="16.0" />
                     </font>
                 </Label>
-                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #f0ffff;" text="ZATVORI" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                <Button fx:id="btnZatvori" mnemonicParsing="false" onAction="#actionZatvori" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #f0ffff;" text="CLOSE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                     <font>
                         <Font name="Times New Roman Bold" size="15.0" />
                     </font></Button>
