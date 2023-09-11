@@ -4,10 +4,16 @@ package ba.unsa.etf.rpr;
 import ba.unsa.etf.rpr.business.BookManager;
 import ba.unsa.etf.rpr.business.PurchaseManager;
 import ba.unsa.etf.rpr.business.UserManager;
+import ba.unsa.etf.rpr.dao.BookDao;
+import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.dao.PurchaseDao;
+import ba.unsa.etf.rpr.dao.UserDao;
 import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
 import java.sql.Date;
@@ -16,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
 /**
  * Unit test for simple App.
@@ -111,6 +118,19 @@ public class AppTest
         assertDoesNotThrow(()->{
             umm.checkPassword(u.getPassword());
         });
+    }
+
+    PurchaseManager purchaseManagerr = new PurchaseManager();
+    UserManager um=new UserManager();
+    public static final PurchaseDao purchaseDaoMock = mock(PurchaseDao.class);
+    public static final UserDao userDaoMock=mock(UserDao.class);
+    public static final BookDao bookDaoMock = mock(BookDao.class);
+    @BeforeAll
+    static void setMock(){
+        MockedStatic<DaoFactory> daoFactory= Mockito.mockStatic(DaoFactory.class);
+        daoFactory.when(DaoFactory::purchaseDao).thenReturn(purchaseDaoMock);
+        daoFactory.when(DaoFactory::bookDao).thenReturn(bookDaoMock);
+        daoFactory.when(DaoFactory::userDao).thenReturn(userDaoMock);
     }
 
 
