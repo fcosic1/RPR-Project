@@ -8,7 +8,7 @@ import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.util.Date;
 import java.util.List;
-
+/** Dao interface for Purchase domain*/
 public interface PurchaseDao extends Dao<Purchase> {
     List<Purchase> getByBook(Book book) throws ProjectException;
     List<Purchase> getByUser(User user) throws ProjectException;

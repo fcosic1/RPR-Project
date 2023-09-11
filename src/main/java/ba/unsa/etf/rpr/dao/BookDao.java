@@ -5,7 +5,7 @@ import ba.unsa.etf.rpr.exceptions.ProjectException;
 
 import java.util.Date;
 import java.util.List;
-
+/** Dao interface for Book domain*/
 public interface BookDao extends Dao<Book> {
     List<Book> searchByBookTitle(String bookTitle) throws ProjectException;
     List<Book> searchByAuthor(String author) throws ProjectException;
