@@ -27,22 +27,22 @@
     <right>
         <VBox prefHeight="376.0" prefWidth="95.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="buttonLogOut" mnemonicParsing="false" onAction="#showLogin" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: #F0FFFF;" text="Log out">
+                <Button fx:id="buttonLogOut" mnemonicParsing="false" onAction="#showLogin" prefHeight="9.0" prefWidth="81.0" style="-fx-background-color: #F0FFFF;" text="Log out">
                     <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font size="14.0" />
                     </font>
                     <VBox.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" prefHeight="28.0" prefWidth="81.0" style="-fx-background-color: #f0ffff;" text="About us">
+                <Button fx:id="btnONama" mnemonicParsing="false" onAction="#actionOtvaranjeONama" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #f0ffff;" text="About us">
                     <font>
                         <Font size="13.0" />
                     </font>
                     <VBox.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #f0ffff;" text="Help">
+                <Button mnemonicParsing="false" onAction="#actionOtvaranjeHelp" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #f0ffff;" text="Help">
                     <VBox.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                     </VBox.margin>
