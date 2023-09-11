@@ -19,4 +19,9 @@ Project requierments are listed as follows:
 13. JavaDoc documentation (1 point)
 14. Using .properties files for configuration (1 point).
 
-Since we had the liberty of picking our own project topics, i made a simple app for adding books in library.
+Since we had the liberty of picking our own project topics, i made a simple eBook application.
+
+## Features
+- User Authentication: Users can register and login to access the book shop functionalities.
+- Browse Books: Users can browse through the list of available books and get details about each book.
+- My books section: Users can add books to my books section
