@@ -6,8 +6,10 @@ import ba.unsa.etf.rpr.business.PurchaseManager;
 import ba.unsa.etf.rpr.business.UserManager;
 import ba.unsa.etf.rpr.domain.Book;
 import ba.unsa.etf.rpr.domain.User;
+import ba.unsa.etf.rpr.exceptions.ProjectException;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -28,5 +30,12 @@ public class AppTest
         assertTrue( true );
     }
 
+    @Test
+    public void usernameLogInTest()
+    {
+        assertThrows(ProjectException.class,()->{
+            userManager.checkUsername("aaaa");
+        });
+    }
 
 }
