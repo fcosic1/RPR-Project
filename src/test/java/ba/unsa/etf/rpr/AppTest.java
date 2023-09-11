@@ -9,6 +9,8 @@ import ba.unsa.etf.rpr.domain.User;
 import ba.unsa.etf.rpr.exceptions.ProjectException;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -54,6 +56,14 @@ public class AppTest
         assertDoesNotThrow(()->{
             userManager.checkLogIn("hamohamic","hamohamic");
         });
+    }
+
+    @Test
+    public void searchByTitle(){
+        List<Book> list = bookManager.getAll();
+        Book book = list.get(1);
+        Book book2=bookManager.searchByBookTitle(book.getBookTitle()).get(0);
+        assertEquals(book.getBookType(),book2.getBookType());
     }
 
 
