@@ -13,6 +13,8 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class OBrenduController {
         public Button btnZatvori, btnPomoc;
+
+        /**metoda za otvaranje helpa*/
         public void actionOtvaranjeHelp(ActionEvent actionEvent) throws IOException {
             try {
                 Stage stage =(Stage)btnPomoc.getScene().getWindow();
@@ -30,7 +32,7 @@ public class OBrenduController {
                 System.out.println(e.getMessage());
             }
         }
-
+    /**metoda za zatvaranje*/
         public void actionZatvori(ActionEvent actionEvent)
         {
             Stage stage =(Stage)btnZatvori.getScene().getWindow();
