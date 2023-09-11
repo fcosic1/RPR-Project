@@ -9,6 +9,9 @@ public class Purchase implements Idable{
     private Book book;
     private User user;
     private Date dateOfRent;
+
+
+
     @Override
     public void setId(int id) {
 

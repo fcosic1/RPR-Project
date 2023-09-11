@@ -79,7 +79,7 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
 
         List<PurchaseTableView> list = new ArrayList<>();
         try {
-            PreparedStatement s = getConnection().prepareStatement("select b.bookTitle as bookTitle, b.price as price, b.author as author,p.dateOfRent as dateOfRent, b.bookType as bookType,  from Book b, Purchase p, User u where b.id=p.book and u.id=p.user and u.username=?");
+            PreparedStatement s = getConnection().prepareStatement("select b.bookTitle as bookTitle, b.price as price, b.author as author, p.dateOfRent as dateOfRent, b.bookType as bookType from Book b, Purchase p, User u where b.id=p.book and u.id=p.user and u.username=?");
             s.setString(1, username);
             ResultSet rs = s.executeQuery();
             while (rs.next()) {
@@ -88,9 +88,8 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
                     p.setBookTitle(rs.getString("bookTitle"));
                     p.setPrice(rs.getDouble("price"));
                     p.setAuthor(rs.getString("author"));
-                    p.setBookType(rs.getString("bookType"));
-
                     p.setPurchase_date(rs.getDate("dateOfRent"));
+                    p.setBookType(rs.getString("bookType"));
                     list.add(p);
                 } catch (SQLException e) {
                     throw new ProjectException(e.getMessage(),e);

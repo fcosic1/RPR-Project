@@ -20,20 +20,33 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             String password = p.getProperty("pw");
             this.connection = DriverManager.getConnection(url, user, password);
         } catch (Exception e) {
-            System.out.println("Can't connect to database");
+            System.out.println("Nemoguce uraditi konekciju na bazu");
             e.printStackTrace();
 
         }
     }
 
-
+    /**
+     * method that returns the connection
+     * @return connection
+     */
     public Connection getConnection() {
         return connection;
     }
 
-
+    /**
+     * Method for mapping ResultSet into Object
+     * @param rs resultset from database
+     * @return object for specific table
+     * @throws ProjectException
+     */
     public abstract T row2object(ResultSet rs) throws ProjectException;
 
+    /**
+     * method for mapping Object into a map
+     * @param object
+     * @return map
+     */
 
     public abstract Map<String, Object> object2row(T object);
     public T getById(int id) throws ProjectException {
@@ -42,7 +55,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
+            if (rs.next()) { // result set is iterator.
                 T result = row2object(rs);
                 rs.close();
                 return result;
@@ -59,7 +72,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         try{
             PreparedStatement stmt =   getConnection().prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()){
+            while (rs.next()){ // result set is iterator.
                 T object = row2object(rs);
                 results.add(object);
             }
@@ -91,7 +104,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
         try{
             PreparedStatement stmt = getConnection().prepareStatement(builder.toString(), Statement.RETURN_GENERATED_KEYS);
-
+            // bind params. IMPORTANT treeMap is used to keep columns sorted so params are bind correctly
             int counter = 1;
             for (Map.Entry<String, Object> entry: row.entrySet()) {
                 if (entry.getKey().equals("id")) continue; // skip ID
@@ -100,8 +113,8 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             }
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
-            item.setId(rs.getInt(1));
+            rs.next(); // we know that there is one key
+            item.setId(rs.getInt(1)); //set id to return it back */
 
             return item;
         }catch (SQLException e){
@@ -134,7 +147,10 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
-
+    /**
+     * Accepts KV storage of column names and return CSV of columns and question marks for insert statement
+     * Example: (id, name, date) ?,?,?
+     */
     private Map.Entry<String, String> prepareInsertParts(Map<String, Object> row){
         StringBuilder columns = new StringBuilder();
         StringBuilder questions = new StringBuilder();
@@ -153,7 +169,11 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         return new AbstractMap.SimpleEntry<String,String>(columns.toString(), questions.toString());
     }
 
-
+    /**
+     * Prepare columns for update statement id=?, name=?, ...
+     * @param row
+     * @return
+     */
     private String prepareUpdateParts(Map<String, Object> row){
         StringBuilder columns = new StringBuilder();
         int counter = 0;
@@ -167,7 +187,13 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
         return columns.toString();
     }
-
+    /**
+     * Utility method for executing any kind of query
+     * @param query - SQL query
+     * @param params - params for query
+     * @return List of objects from database
+     * @throws ProjectException in case of error with db
+     */
     public List<T> executeQuery(String query, Object[] params) throws ProjectException{
         try {
             PreparedStatement stmt = getConnection().prepareStatement(query);
@@ -187,7 +213,13 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
-
+    /**
+     * Utility for query execution that always return single record
+     * @param query - query that returns single record
+     * @param params - list of params for sql query
+     * @return Object
+     * @throws ProjectException in case when object is not found
+     */
     public T executeQueryUnique(String query, Object[] params) throws ProjectException{
         List<T> result = executeQuery(query, params);
         if (result != null && result.size() == 1){

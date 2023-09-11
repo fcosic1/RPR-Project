@@ -37,7 +37,7 @@ public class BooksController implements Initializable {
     @FXML
     public TableColumn column_bookType;
     @FXML
-    public TableColumn column_ageOfBook;
+    public TableColumn column_date;
     @FXML
     public TableColumn column_price;
     public TextField searchTextField;
@@ -55,12 +55,12 @@ public class BooksController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Book> list = bookManager.getAll();
         for(int i=0;i<list.size();i++){
-            bookList.add(new Book(list.get(i).getId(),list.get(i).getBookTitle(), list.get(i).getAgeOfBook(), list.get(i).getAuthor(), list.get(i).getPrice(),list.get(i).getBookType()));
+            bookList.add(new Book(list.get(i).getId(),list.get(i).getBookTitle(), list.get(i).getPrice(), list.get(i).getAuthor(),list.get(i).getAgeOfBook(), list.get(i).getBookType()));
         }
         column_title.setCellValueFactory(new PropertyValueFactory<>("bookTitle"));
         column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
         column_author.setCellValueFactory(new PropertyValueFactory<>("author"));
-        column_ageOfBook.setCellValueFactory(new PropertyValueFactory<>("ageOfBook"));
+        column_date.setCellValueFactory(new PropertyValueFactory<>("ageOfBook"));
         column_bookType.setCellValueFactory(new PropertyValueFactory<>("bookType"));
 
         user_table.setItems(bookList);
@@ -101,7 +101,7 @@ public class BooksController implements Initializable {
             user = userManager.searchByUsername(LoginController.getUsername());
         else
             user = userManager.searchByUsername(SignupController.username);
-        try{
+       try{
             PurchaseManager purchaseManager=new PurchaseManager();
             purchaseManager.isPurchaseAlreadyMade(user,book);
         } catch (ProjectException e) {

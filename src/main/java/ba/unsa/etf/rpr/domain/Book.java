@@ -13,12 +13,12 @@ public class Book implements Idable{
     private String bookType;
 
 
-    public Book(int book_id, String bookTitle, Date ageOfBook, String author, double price, String bookTypeID){
+    public Book(int book_id, String bookTitle, double price, String author ,Date ageOfBook, String bookTypeID){
         this.id = book_id;
         this.bookTitle = bookTitle;
-        this.ageOfBook = ageOfBook;
-        this.author = author;
         this.price = price;
+        this.author = author;
+        this.ageOfBook = ageOfBook;
         this.bookType = bookTypeID;
     }
 
@@ -30,6 +30,8 @@ public class Book implements Idable{
         this.price = 0;
         this.bookType = "";
     }
+
+
 
 
     public String getBookTitle() { return bookTitle;}

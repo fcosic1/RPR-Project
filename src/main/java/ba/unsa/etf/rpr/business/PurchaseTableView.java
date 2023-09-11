@@ -10,16 +10,19 @@ public class PurchaseTableView {
     private Date purchase_date;
     private double price;
 
-    public PurchaseTableView(String bookTitle, String author, String bookType, double price, Date date) {
+    public PurchaseTableView(String bookTitle, double price, String author, Date date, String bookType) {
         this.bookTitle=bookTitle;
-        this.author=author;
-        this.bookType=bookType;
         this.price=price;
-        this.purchase_date=date;
+        this.author=author;
+        this.purchase_date = date;
+        this.bookType=bookType;
     }
     public PurchaseTableView() {
 
     }
+
+
+
     public String getBookTitle() {
         return bookTitle;
     }

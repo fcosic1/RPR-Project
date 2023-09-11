@@ -8,7 +8,7 @@ public class User implements Idable {
     private String firstName;
     private String lastName;
     private String email;
-    private String userName;
+    private String username;
     private String password;
     @Override
     public void setId(int id) {
@@ -20,13 +20,13 @@ public class User implements Idable {
         return 0;
     }
 
-    public User(String firstName, String lastName, String email, String userName, String password){
+    public User(String firstName, String lastName, String email, String username, String password){
         this.id = 0;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.userName = userName;
+        this.username = username;
     }
 
 
@@ -36,7 +36,7 @@ public class User implements Idable {
         this.lastName = "";
         this.email = "";
         this.password = "";
-        this.userName = "";
+        this.username = "";
     }
     public String getFirstName() {
         return firstName;
@@ -70,12 +70,12 @@ public class User implements Idable {
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -83,12 +83,12 @@ public class User implements Idable {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return getId() == user.getId() && Objects.equals(getFirstName(), user.getFirstName()) && Objects.equals(getLastName(), user.getLastName()) && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getUserName(), user.getUserName());
+        return getId() == user.getId() && Objects.equals(getFirstName(), user.getFirstName()) && Objects.equals(getLastName(), user.getLastName()) && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getUsername(), user.getUsername());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName(), getEmail(), getPassword(), getUserName());
+        return Objects.hash(getId(), getFirstName(), getLastName(), getEmail(), getPassword(), getUsername());
     }
 
     @Override
@@ -99,7 +99,7 @@ public class User implements Idable {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", userName='" + userName + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
 

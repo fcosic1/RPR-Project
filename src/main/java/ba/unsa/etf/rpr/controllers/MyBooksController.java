@@ -36,22 +36,7 @@ public class MyBooksController implements Initializable {
     @FXML
     private ObservableList<PurchaseTableView> bookList = FXCollections.observableArrayList();
     private final PurchaseTableViewManager purchaseTableViewManager=new PurchaseTableViewManager();
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<PurchaseTableView> list;
-        if(LoginController.getUsername() != null)
-            list = purchaseTableViewManager.getMyBooks(LoginController.getUsername());
-        else list = purchaseTableViewManager.getMyBooks(SignupController.username);
-        for(int i=0;i<list.size();i++){
-            bookList.add(new PurchaseTableView(list.get(i).getBookTitle(),list.get(i).getAuthor(),list.get(i).getBookType(),list.get(i).getPrice(),list.get(i).getPurchase_date()));
-        }
-        column_title.setCellValueFactory(new PropertyValueFactory<>("bookTitle"));
-        column_author.setCellValueFactory(new PropertyValueFactory<>("author"));
-        column_bookType.setCellValueFactory(new PropertyValueFactory<>("bookType"));
-        column_date.setCellValueFactory(new PropertyValueFactory<>("purchase_date"));
-        column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
-        myBooksTable.setItems(bookList);
-    }
+
     private void switchScene(String fxml) throws IOException {
         Stage stage=(Stage) myBooksTable.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/"+fxml+".fxml"));
@@ -65,11 +50,29 @@ public class MyBooksController implements Initializable {
         }
         stage.setScene(new Scene(root,600,430));
     }
-    public void showBooks(ActionEvent actionEvent) throws IOException {
-        switchScene("books");
-    }
+
     public void showHome(ActionEvent actionEvent) throws IOException {
         switchScene("home");
     }
+    public void showBooks(ActionEvent actionEvent) throws IOException {
+        switchScene("books");
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        List<PurchaseTableView> list;
+        if(LoginController.getUsername() != null)
+            list = purchaseTableViewManager.getMyBooks(LoginController.getUsername());
+        else list = purchaseTableViewManager.getMyBooks(SignupController.username);
+        for(int i=0;i<list.size();i++){
+            bookList.add(new PurchaseTableView(list.get(i).getBookTitle(), list.get(i).getPrice(), list.get(i).getAuthor(),list.get(i).getPurchase_date(), list.get(i).getBookType()));
+        }
+        column_title.setCellValueFactory(new PropertyValueFactory<>("bookTitle"));
+        column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        column_author.setCellValueFactory(new PropertyValueFactory<>("author"));
+        column_date.setCellValueFactory(new PropertyValueFactory<>("purchase_date"));
+        column_bookType.setCellValueFactory(new PropertyValueFactory<>("bookType"));
+        myBooksTable.setItems(bookList);
+    }
+
 }
 
