@@ -36,10 +36,12 @@ public class UserManager {
         else if(username.trim().length()<5 || username.trim().length()>15)
             throw new ProjectException("Username needs to be between 5 and 15 characters long!");
     }
+    /**Provjera passworda da li je izmedju 8 i 20*/
     public void checkPassword(String password){
         if(password.trim().isEmpty()) throw new ProjectException("Password field empty");
         else if(password.trim().length()<8 || password.trim().length()>20) throw new ProjectException("Password needs to be between 8 and 20 characters long!");
     }
+    /**provjera logina, da li ima user sa tim usernamom, i da li je password tacan*/
     public void checkLogIn(String username, String password){
         checkUsername(username);
         checkPassword(password);
