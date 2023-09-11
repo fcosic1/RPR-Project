@@ -28,6 +28,7 @@ public class SignupController {
 
     public static String username ;
 
+    /**method which adds the new user to the database */
     public void buttonRegister(ActionEvent actionEvent) throws IOException {
         try{
             userManager.checkFieldEmpty(new ArrayList<String>(Arrays.asList(fieldName.getText(),fieldLastname.getText(),
@@ -52,7 +53,7 @@ public class SignupController {
     }
 
 
-
+    /**method which displays the login screen if the user is already registered*/
     public void buttonLogIn(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) fieldPassword.getScene().getWindow();
         stage.close();
