@@ -66,5 +66,22 @@ public class HomeController {
             System.out.println(e.getMessage());
         }
     }
+    public void actionOtvaranjeONama(ActionEvent actionEvent) throws IOException {
+        try {
+
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/obrendu.fxml"));
+            OBrenduController brend = new OBrenduController();
+            fxmlLoader.setController(brend);
+            Scene scene = new Scene(fxmlLoader.load(), PopupControl.USE_COMPUTED_SIZE, PopupControl.USE_COMPUTED_SIZE);
+            stage1.setTitle("eBook");
+            stage1.setScene(scene);
+            stage1.setResizable(false);
+            stage1.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 
 }
