@@ -1,7 +1,7 @@
 package ba.unsa.etf.rpr.business;
 
 import java.util.Date;
-
+/**Helping class for TableView in MyBooks section*/
 public class PurchaseTableView {
 
     private String bookTitle;
