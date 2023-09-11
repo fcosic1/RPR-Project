@@ -62,7 +62,7 @@
                     <font>
                         <Font name="Times New Roman Bold" size="15.0" />
                     </font></Button>
-                <Label text="DODATI TEXT" textAlignment="JUSTIFY" wrapText="true" GridPane.rowIndex="2">
+                <Label text="Predstavljamo našu jednostavnu aplikaciju za eKnjige! Da li ste strastveni čitalac koji uživa u praktičnosti nošenja čitave biblioteke u džepu? Ne tražite dalje! Naša jednostavna aplikacija za eKnjige je vaš ulaz u svijet književnih blaga na dohvat ruke." textAlignment="JUSTIFY" wrapText="true" GridPane.rowIndex="2">
                     <font>
                         <Font name="Times New Roman" size="14.5" />
                     </font>
